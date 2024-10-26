@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   
     function updateLyrics() {
       const currentTime = audioPlayer.currentTime;
-        
+  
       for (let i = 0; i < lyricsLines.length; i++) {
         const lineTime = parseFloat(lyricsLines[i].getAttribute('data-time'));
         const nextLineTime = lyricsLines[i + 1] ? parseFloat(lyricsLines[i + 1].getAttribute('data-time')) : Infinity;
-      }
   
         if (currentTime >= lineTime && currentTime < nextLineTime) {
           lyricsLines[i].classList.add('active');
