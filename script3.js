@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
           lyricsLines[i].classList.remove('active');
         }
       }
+    }, 100);
     }
   
     audioPlayer.addEventListener('timeupdate', updateLyrics);
