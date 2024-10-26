@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const lineTime = parseFloat(lyricsLines[i].getAttribute('data-time'));
         const nextLineTime = lyricsLines[i + 1] ? parseFloat(lyricsLines[i + 1].getAttribute('data-time')) : Infinity;
       }
-  }
   
         if (currentTime >= lineTime && currentTime < nextLineTime) {
           lyricsLines[i].classList.add('active');
